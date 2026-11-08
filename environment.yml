@@ -1,0 +1,17 @@
+name: rule_inference
+channels: [conda-forge]
+dependencies:
+  - python=3.12
+  - pip
+  - pip:
+      - "jax[cuda12]"
+      - optax
+      - cma
+      - numpy
+      - pandas
+      - matplotlib
+      - pytest
+      - --extra-index-url https://download.pytorch.org/whl/cpu
+      - torch
+      - sbi
+      - -e .

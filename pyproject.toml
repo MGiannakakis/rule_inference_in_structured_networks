@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ruleinf"
+version = "0.1.0"
+description = "Topology-dependent identifiability of synaptic plasticity rules"
+requires-python = ">=3.11"
+dependencies = ["jax", "optax", "cma", "numpy", "pandas", "matplotlib"]
+
+[project.optional-dependencies]
+sbi = ["torch", "sbi"]
+dev = ["pytest"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
